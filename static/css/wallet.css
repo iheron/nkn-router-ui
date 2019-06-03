@@ -1,7 +1,7 @@
 .wallet {overflow: hidden; height: 440px;}
 .wallet .tag {
   border-radius: 0;
-  position: absolute;width: 200px;left: -66px;top: 14px;
+  position: absolute;width: 200px;left: -54px;top: 24px;
   transform: rotate(-30deg);
   -ms-transform: rotate(-30deg); /* IE 9 */
   -moz-transform: rotate(-30deg); /* Firefox */
