@@ -1,5 +1,4 @@
 .wallet {overflow: hidden; height: 440px;}
-
 .wallet .tag {
   border-radius: 0;
   position: absolute;width: 200px;left: -66px;top: 14px;
@@ -11,11 +10,16 @@
 }
 
 .wallet .button-groups {position: absolute; bottom: 10px; left: 0;width: 100%; padding-left: 20px;padding-right: 20px; box-sizing: border-box;}
-
 .wallet .button-groups > * {margin-left: 10px;}
-
 .wallet .coin{height: 22px; align-self: center;}
 .wallet .coin img{height: 100%;}
+
+.margin-bottom-0{margin-bottom: 0;}
+.padding-0{padding: 0;}
+
+
+
+
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 1000px;
