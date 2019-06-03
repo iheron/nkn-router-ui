@@ -33,10 +33,10 @@
     <div class="card wallet" style="width: 24rem;">
       <span class="badge badge-secondary tag shadow-sm">NKN Wallet</span>
       <div class="card-body d-flex flex-column">
-        <h5 class="card-title align-self-end">Upload my wallet</h5>
+        <h5 class="card-title align-self-end">Open wallet</h5>
         <form class="validation-form" novalidate>
           <div class="form-group">
-            <label for="walletFile" class="bmd-label-floating">Wallet json file</label>
+            <label for="walletFile" class="bmd-label-floating">Upload wallet</label>
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="walletFile" required>
               <label class="custom-file-label justify-content-start" for="walletFile">Choose file...</label>
@@ -96,19 +96,20 @@
                   </div>
                 </div>
                 <hr class="my-1" style="width:100%;border-top-style:dashed;">
-                <div class="form-group">
-                    <label for="inputPassword">Beneficiary</label>
-                    <input type="text" class="form-control" placeholder="NKN wallet address" required>
-                    <span class="form-text text-muted">New amount will auto transfer to this address.</span>
-                </div>
-                <div >
+                <div class="form-group margin-bottom-0">
                   <div class="switch">
                     <label>
-                      <input type="checkbox">
+                      <input name="autoTransfer" type="checkbox">
                       Auto Transfer
                     </label>
                   </div>
                 </div>
+                <div class="form-group">
+                    <label for="inputBeneficiary">Beneficiary</label>
+                    <input id="inputBeneficiary" type="text" class="form-control" placeholder="NKN wallet address" readonly>
+                    <span class="form-text text-muted">New amount will auto transfer to this address.</span>
+                </div>
+
                 <div class="form-group d-flex justify-content-end button-groups">
                   <button type="button" class="btn btn-primary btn-flip">Transfer</button>
                 </div>
@@ -184,6 +185,10 @@
       $(this).parents('.flip-container').toggleClass('active')
     })
 
+    $('[name=autoTransfer]').click(function () {
+      var checked = $(this).is(':checked')
+      $('#inputBeneficiary').attr('readonly', !checked)
+    })
     var forms = document.getElementsByClassName('validation-form')
     // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function (form) {
