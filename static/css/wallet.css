@@ -21,8 +21,12 @@
   perspective: 1000px;
 }
 /* flip the pane when hovered */
-.flip-container.active > .flipper{
+.flip-container.active .front{
   transform: rotateY(180deg);
+}
+
+.flip-container.active .back {
+  transform: rotateY(0deg);
 }
 
 .flip-container, .front, .back {
@@ -52,7 +56,5 @@
 }
 
 /* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-}
+.back {transform: rotateY(180deg);z-index: -3}
 
