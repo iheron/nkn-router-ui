@@ -1,0 +1,5 @@
+body{padding: 10px;}
+.nav-tabs{margin: 4px;}
+.main{padding: 4px;display: flex;flex-direction: row;flex-wrap: wrap;}
+.main:first-child{margin-left: 0;}
+.main > *{margin-left: 10px;}

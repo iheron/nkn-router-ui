@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../static/css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="../static/css/layout.css">
+  <link rel="stylesheet" href="../static/css/wallet.css">
+
+</head>
+<body>
+<div class="card bg-light">
+  <div class="card-header">NKN - 节点管理器</div>
+  <ul class="nav nav-tabs d-flex flex-row">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">节点管理</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">节点信息</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">节点日志</a>
+    </li>
+  </ul>
+  <div class="card-body main">
+
+    <div class="alert alert-primary" role="alert">
+      <p>
+        NKN是区块链技术驱动的一种开放、去中心化的新型网络。NKN倡导用户共享网络资源，鼓励大家构建人人为我，我为人人的共建共享对等网络，在让共建者因协助数据传输而获得经济回报的同时为开发者提供一个开放，便捷，高效和安全的网络平台，让所有人都能体验更好的网络应用和服务。</p>
+    </div>
+
+    <div class="card wallet" style="width: 24rem;">
+      <span class="badge badge-secondary tag shadow-sm">NKN Wallet</span>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title align-self-end">Upload my wallet</h5>
+        <form class="validation-form" novalidate>
+          <div class="form-group">
+            <label for="walletFile" class="bmd-label-floating">Wallet json file</label>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="walletFile" required>
+              <label class="custom-file-label justify-content-start" for="walletFile">Choose file...</label>
+
+              <div class="invalid-feedback">
+                please upload your nkn wallet.
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputPassword" class="bmd-label-floating">Password</label>
+            <input type="password" class="form-control" id="inputPassword" required>
+            <div class="invalid-feedback">
+              this field is required.
+            </div>
+          </div>
+          <div class="form-group d-flex justify-content-end button-groups">
+            <button type="submit" class="btn btn-primary active" aria-pressed="true">Submit</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front">
+          <div class="card wallet" style="width: 24rem;">
+            <span class="badge badge-success tag shadow-sm">NKN Wallet</span>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title align-self-end">My wallet</h5>
+              <form class="d-flex flex-column">
+                <div class="form-group">
+                  <label for="addrInput" class="bmd-label-floating">Address</label>
+                  <div class="input-group">
+                    <input id="addrInput" type="text" class="col form-control-plaintext" placeholder="Address" readonly
+                           aria-label="Recipient's username" aria-describedby="basic-addon2" value="xxxxxsdfsfsdf">
+                    <div class="input-group-append">
+                      <button id="copyAddr" data-clipboard-target="#addrInput" type="button"
+                              class="btn btn-secondary btn-sm"
+                              data-toggle="tooltip"
+                              data-placement="bottom" title="Copied!">
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="balance" class="bmd-label-floating">Balance</label>
+                  <div class="input-group">
+                    <div class="coin">
+                      <img src="../images/coin.png"/>
+                    </div>
+                    <input id="balance" type="text" class="col form-control-plaintext" placeholder="Address" readonly
+                           value="0">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Beneficiary</label>
+                  <input type="text" class="form-control" placeholder="NKN wallet address" required>
+                  <span class="form-text text-muted">New amount will auto transfer to this address.</span>
+
+                </div>
+                <div class="form-group d-flex justify-content-end button-groups">
+                  <button type="button" class="btn btn-primary btn-flip">Transfer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card wallet" style="width: 24rem;">
+            <span class="badge badge-success tag shadow-sm">NKN Wallet</span>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title align-self-end">NKN transfer to</h5>
+              <form class="validation-form" novalidate>
+                <div class="form-group">
+                  <label for="inputPassword">NKN transfer to</label>
+                  <input type="text" class="form-control" placeholder="Transfer to address" required>
+                  <div class="invalid-feedback">
+                    this field is required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">How much NKN to transfer
+                  </label>
+                  <input type="text" class="form-control" placeholder="NKN amount" required>
+                  <div class="invalid-feedback">
+                    this field is required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Your wallet password
+                  </label>
+                  <input type="password" class="form-control" placeholder="Password" required>
+                  <div class="invalid-feedback">
+                    this field is required.
+                  </div>
+                </div>
+                <div class="form-group d-flex justify-content-end button-groups">
+                  <button type="button" class="btn btn-primary btn-flip"
+                          style="margin-right: auto;margin-left: 0;">Wallet
+                  </button>
+                  <button type="submit" class="btn btn-primary active" aria-pressed="true">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+<script src="../static/js/jquery-3.4.1.slim.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap-material-design.js"></script>
+<script src="../static/js/bs-custom-file-input.min.js"></script>
+<script src="../static/js/clipboard.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('body').bootstrapMaterialDesign()
+    bsCustomFileInput.init()
+
+    var clipboard = new ClipboardJS('#copyAddr')
+
+    clipboard.on('success', function (e) {
+      $('#copyAddr').tooltip('show')
+    })
+
+    clipboard.on('error', function (e) {
+      console.log(e)
+    })
+    $('.btn-flip').click(function () {
+      $('.flip-container').toggleClass('active')
+    })
+
+    var forms = document.getElementsByClassName('validation-form')
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })
+
+</script>
+</body>
+</html>
